@@ -1,0 +1,7 @@
+2026-06-21 01:33:24,588 [INFO    ] MainThread - Application starting up... (main:26)
+2026-06-21 01:33:24,588 [INFO    ] MainThread - Current working directory: C:\CHRIST\S3\NewFileMonitor (1)\NewFileMonitor (main:27)
+2026-06-21 01:33:24,911 [INFO    ] MainThread - Loading monitored folders from monitored_folders.txt (app_gui:637)
+2026-06-21 01:33:24,912 [INFO    ] MainThread - Loaded 0 folders. Skipped 0 invalid entries. (app_gui:656)
+2026-06-21 01:33:24,913 [INFO    ] MainThread - USB device monitoring initiated. (app_gui:91)
+2026-06-21 01:33:24,913 [INFO    ] MainThread - Starting Tkinter main loop... (main:39)
+2026-06-21 01:45:47,521 [INFO    ] MainThread - Application shutdown sequence completed. (main:68)
