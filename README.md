@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="banner.svg" width="100%" alt="File & USB Activity Monitor" />
+<img src="assets/banner.svg" width="100%" alt="File & USB Activity Monitor" />
 
 <br/>
 
@@ -12,7 +12,7 @@
 
 </div>
 
-<img src="divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 ## 👋 Overview
 
@@ -20,25 +20,23 @@
 
 > 💡 *Built to show how file activity and removable media can be tracked in real time, a core idea in security monitoring and digital forensics.*
 
-<img src="divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 ## 🖥️ Preview
 
 <div align="center">
 
-<img src="preview.svg" width="100%" alt="App preview" />
+<img src="assets/preview.png" width="100%" alt="App preview" />
 
 </div>
 
-<sub>The image above is an illustration of the interface with sample events. To use a real screenshot instead, save it as `preview.png` and change the image path above.</sub>
-
-<img src="divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 ## ✨ Features
 
 <div align="center">
 
-<img src="features.svg" width="100%" alt="Features" />
+<img src="assets/features.svg" width="100%" alt="Features" />
 
 </div>
 
@@ -48,11 +46,11 @@ Each log line is colored by what happened:
 
 <div align="center">
 
-<img src="events.svg" width="100%" alt="Event types: inserted, removed, created, modified, deleted, error" />
+<img src="assets/events.svg" width="100%" alt="Event types: inserted, removed, created, modified, deleted, error" />
 
 </div>
 
-<img src="divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 ## 🔄 How It Works
 
@@ -72,7 +70,7 @@ flowchart LR
 - **USB drives** are detected through the Windows `Win32_VolumeChangeEvent` WMI class. Duplicate events are filtered with a one-second debounce, and newly inserted drives are monitored automatically as `[USB]`.
 - **The GUI** receives events from background threads and updates the log safely on the main thread.
 
-<img src="divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 ## 🛠️ Tech Stack
 
@@ -84,7 +82,7 @@ flowchart LR
 | 🔌 **USB events** | `WMI`, `pywin32` (`pythoncom`) |
 | 📦 **Packaging** | PyInstaller |
 
-<img src="divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 ## ⚙️ Getting Started
 
@@ -115,7 +113,7 @@ pyinstaller main.spec
 
 The executable is created in the `dist/` folder.
 
-<img src="divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 ## 🕹️ Usage
 
@@ -133,7 +131,7 @@ The executable is created in the `dist/` folder.
 | `Del` | Remove the selected folder |
 | Right-click | Copy the selected log rows |
 
-<img src="divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 ## 📁 Project Structure
 
@@ -148,7 +146,8 @@ Log_Monitor/
 ├── main.spec                # PyInstaller build config
 ├── monitored_folders.txt    # Saved folder list (created by the app)
 ├── authorized_usb_devices.txt  # Reserved for a future USB allow-list
-└── requirements.txt
+├── requirements.txt
+└── assets/                  # README images
 ```
 
 ### 🗂️ Files created while running
@@ -159,7 +158,7 @@ Log_Monitor/
 | `app_monitor.log` | Application log, overwritten on each launch |
 | `file_usb_activity_log.txt` | Exported activity log (location chosen on export) |
 
-<img src="divider.svg" width="100%" alt="" />
+<img src="assets/divider.svg" width="100%" alt="" />
 
 ## ⚠️ Disclaimer
 
