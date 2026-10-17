@@ -22,8 +22,16 @@ def load_authorized_devices():
 def usb_event_callback(message):
     print(f"[USB Event] {message}")
 
+_monitoring_active = False
+
+def stop_usb_monitoring():
+    global _monitoring_active
+    _monitoring_active = False
+
 # USB Monitoring Function
 def start_usb_monitoring(callback, start_usb_file_monitor_callback):
+    global _monitoring_active
+    _monitoring_active = True
     def monitor_usb():
         pythoncom.CoInitialize()
         c = wmi.WMI()
@@ -46,7 +54,7 @@ def start_usb_monitoring(callback, start_usb_file_monitor_callback):
         last_event = None  # (drive, event_type, monotonic_time)
         debounce_seconds = 1.0
 
-        while True:
+        while _monitoring_active:
             try:
                 event = watcher(timeout_ms=100)
                 if not event:
